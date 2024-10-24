@@ -49,7 +49,7 @@ Title: HLA-Epicheck: Efficient prediction of HLA B-cell epitopes using 3D-surfac
 
 ## Usage
 
-The notebook 'User_guide' in the 'scripts' folder presents the procedure to follow in order to generate and use the ML descriptors defined in the HLA-EpiCheck paper. This procedure could be used to process new antigen data (new MD trajectories) or to reproduce the results obtained in the paper. 
+The notebook 'User_guide.ipynb' in the 'scripts' folder presents the procedure to follow in order to generate and use the ML descriptors defined in the HLA-EpiCheck paper. This procedure could be used to process new antigen data (new MD trajectories) or to reproduce the results obtained in the paper. 
 
 ## Contact
 
