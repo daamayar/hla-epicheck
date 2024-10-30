@@ -6,9 +6,9 @@ HLA-EpiCheck is a machine-learning project dedicated to the prediction of HLA ep
 
 Static and dynamic descriptors are defined and calculated for each 3D-surface patch. Dynamic descriptors are derived from 500 frames representing the last 5 ns of short molecular dynamics (MD) simulation runs (10 ns).
 
-This repository contains all the scripts used for obtaining the results presented in a paper currently under evaluation:
+This repository contains all the scripts used for obtaining the results presented in a paper currently under evaluation :
 
-Title: HLA-Epicheck: Efficient prediction of HLA B-cell epitopes using 3D-surface patch descriptors derived from molecular dynamics simulations.
+Title : HLA-Epicheck: Efficient prediction of HLA B-cell epitopes using 3D-surface patch descriptors derived from molecular dynamics simulations.
 
 ## Content
 
@@ -18,7 +18,7 @@ Title: HLA-Epicheck: Efficient prediction of HLA B-cell epitopes using 3D-surfac
     * compute_prepatches.tcl : This tcl script is used to get the list of AAs within a radius of a given AA for each frame of the trajectory. Filtering the solvent-accessible AAs allows the solvent-accessible patches. For this purpose, median RSASA values for each AA and across the 500 frames considered are precomputed in the RSASA_median.txt file in each antigen folder. The usage is indicated in the header of the script.
     * dataset_gen_radius_15.ipynb : This notebook generates the ML descriptors from patches of 15A radius presented in the HLA-EpiCheck paper. Its usage is explained in the 'User_guide.ipynb' notebook.
     * pdb2fasta.sh : This shell script is used by the 'dataset_gen_radius_15.ipynb' notebook. It extracts the AA sequence from a PDB structure.
-    * RMSF.tcl: This tcl script is used by the 'run_batch_RMSF.sh' script to calculate the RMSF of a MD trajectory.
+    * RMSF.tcl : This tcl script is used by the 'run_batch_RMSF.sh' script to calculate the RMSF of a MD trajectory.
     * RSASA_trajectory.py : This script calculates RSASA values for a set of MD trajectories. Its usage is explained in the 'User_guide.ipynb' notebook.
     * run_batch_RMSF.sh and run_vmd_RMSF.sh : These shell scripts calculate  RMSF values for a set of MD trajectories. Their usage is explained in the 'User_guide.ipynb' notebook.
     * SASA_compute_trajectory.tcl : This tcl script is used by the 'RSASA_trajectory.py' to calculate SASA values.
@@ -39,10 +39,10 @@ Title: HLA-Epicheck: Efficient prediction of HLA B-cell epitopes using 3D-surfac
     * Max_SASA_per_residue.tsv : maximum SASA values of AAs reported in 'Tien, M.Z. et al. 2013. https://doi.org/10.1371/journal.pone.0080635'.
     * precomputed_HLA-EpiCheck_zip.txt : link to download precomputed data (12 Gb compressed) requiring heavy calculation (several days on several nodes). This data can be re-used to run the notebook 'dataset_gen_al_radius_15.ipynb'. Data is organized by locus and antigen. In each antigen folder, four types of data can be found :
 
-        + patchs : prepatches computed with the script compute_prepatches.tcl. Each file contains the prepatches for a given residue and patch radius (see file name). The format used in each file is as follows: each line corresponds to a prepatch and contains two colon-separated entries. The first one corresponds to a space-separated list of the residues that compose the prepatch and the second one corresponds to the PDB frame from which the prepatch was extracted.
+        + patchs : prepatches computed with the script compute_prepatches.tcl. Each file contains the prepatches for a given residue and patch radius (see file name). The format used in each file is as follows : each line corresponds to a prepatch and contains two colon-separated entries. The first one corresponds to a space-separated list of the residues that compose the prepatch and the second one corresponds to the PDB frame from which the prepatch was extracted.
         + PDBs : PDB files used for computing the prepatches and SASA data.
-        + SASAs_out : SASA values computed for each PDB frame (i.e. one SASA file per frame). The format used in each file is as follows: each line corresponds to an AA and contains the AA number (numbering starts at 0) and the corresponding SASA value.
-        + RSASA_median.txt : median RSASA computed for each AA along the trajectory. The format used in each file is as follows: each line corresponds to an AA and contains the AA number (numbering starts at 0) and the corresponding RSASA value.
+        + SASAs_out : SASA values computed for each PDB frame (i.e. one SASA file per frame). The format used in each file is as follows : each line corresponds to an AA and contains the AA number (numbering starts at 0) and the corresponding SASA value.
+        + RSASA_median.txt : median RSASA computed for each AA along the trajectory. The format used in each file is as follows : each line corresponds to an AA and contains the AA number (numbering starts at 0) and the corresponding RSASA value.
 
 ## Usage
 
